@@ -9,7 +9,9 @@ module.exports = function (mongodb, options) {
         db: options.db || 'test',
         retries: options.retries || 60,
         reconnectWait: options.reconnectWait || 1000,
-        options: options.options
+        options: options.options,
+        name: options.name,
+        pwd: options.pwd
     };
 
     var MongoClient = mongodb.MongoClient;
