@@ -43,9 +43,12 @@ app.get('/', function(req, res) {
 
 ```
 
- * `host` - server or replica string (default: `localhost`, but can be `server.one.com:123,server.two.com:456`)
+ * `hosts` - servers or replicas array (default: [{host: '127.0.0.1', port: 27017}])
  * `db` - name of database (default: `test`)
- * `options` - object, that passed to [MongoClient.connect](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#read-preference).
+ * `options` - object, that passed to
+ * `name` - user name for authentication
+ * `pwd` - password for authentication
+ * [MongoClient.connect](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#read-preference).
  * And all options from [connect-once](https://github.com/floatdrop/connect-once), such as `reconnectWait` and `heartbeat` function.
 
 
