@@ -16,7 +16,7 @@ module.exports = function (mongodb, options) {
     var connection = new connectOnce(
         options,
         MongoClient.connect,
-        'mongodb://' + options.host + '/' + options.db,
+        'mongodb://' + options.name + ':' + options.pwd + '@' + options.host + '/' + options.db,
         options.options
     );
 
